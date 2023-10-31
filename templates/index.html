@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hash Generator demo</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Hash Generator</h1>
+    <form method="POST">
+        <label for="input_text">Enter Text:</label>
+        <input type="text" name="input_text" id="input_text" required>
+        <button type="submit">Generate Hash</button>
+    </form>
+
+    {% if result %}
+    <div>
+        <p>Generated Hash: {{ result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
